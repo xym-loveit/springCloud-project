@@ -21,6 +21,7 @@
         <module>springCloud-serviceSingleConsumerWithFeign</module>
         <module>springCloud-serviceConsumerWithRibbonAndHystrix</module>
         <module>springCloud-serviceSingleConsumerWithFeign-hystrixDashboard</module>
+        <module>springCloud-hystrix-dashboard-turbine</module>
     </modules>
 
     <!--系统公共的属性-->
