@@ -20,6 +20,7 @@
         <module>springCloud-serviceSingleProvider</module>
         <module>springCloud-serviceSingleConsumerWithFeign</module>
         <module>springCloud-serviceConsumerWithRibbonAndHystrix</module>
+        <module>springCloud-serviceSingleConsumerWithFeign-hystrixDashboard</module>
     </modules>
 
     <!--系统公共的属性-->
