@@ -25,6 +25,10 @@
         <module>springCloud-configServerclient</module>
         <module>springCloud-configServer-service</module>
         <module>springCloud-configClient-service</module>
+        <module>springCloud-zuul-server</module>
+        <module>springCloud-zuul-serviceA</module>
+        <module>springCloud-zuul-serviceB</module>
+        <module>springCloud-zuul-geteway</module>
     </modules>
 
     <!--系统公共的属性-->
