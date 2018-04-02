@@ -29,6 +29,12 @@
         <module>springCloud-zuul-serviceA</module>
         <module>springCloud-zuul-serviceB</module>
         <module>springCloud-zuul-geteway</module>
+        <module>springCloud-eurekaHA-server1</module>
+        <module>springCloud-eurekaHA-server2</module>
+        <module>springCloud-eurekaHA-computerService</module>
+        <module>springCloud-eurekaHA-server3</module>
+        <module>springCloud-eurekaHA-server4</module>
+        <module>springCloud-eurekaHA-server5</module>
     </modules>
 
     <!--系统公共的属性-->
