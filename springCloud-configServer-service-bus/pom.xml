@@ -9,6 +9,7 @@
 
     <artifactId>springCloud-configServer-service-bus</artifactId>
     <packaging>jar</packaging>
+    <description>将消息总线移至config server中</description>
 
     <name>springCloud-configServer-service-bus</name>
     <url>http://maven.apache.org</url>
@@ -25,6 +26,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!--消息总线-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
 
