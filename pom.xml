@@ -35,6 +35,8 @@
         <module>springCloud-eurekaHA-server3</module>
         <module>springCloud-eurekaHA-server4</module>
         <module>springCloud-eurekaHA-server5</module>
+        <module>springCloud-configServer-service-bus</module>
+        <module>springCloud-configClient-service-bus</module>
     </modules>
 
     <!--系统公共的属性-->
