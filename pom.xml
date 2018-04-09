@@ -50,6 +50,7 @@
         <module>microservice-consumer-movie-ribbon-customizing</module>
         <module>microservice-consumer-movie-ribbon-customizing-properties</module>
         <module>microservice-consumer-movie-without-eureka</module>
+        <module>microservice-consumer-movie-feign</module>
     </modules>
 
     <!--系统公共的属性-->
