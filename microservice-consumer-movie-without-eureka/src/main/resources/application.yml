@@ -1,0 +1,20 @@
+server:
+  port: 8010
+info:
+  app:
+    name: '@project.artifactId@'
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      source: "@maven.compiler.source@"
+      target: "@maven.compiler.target@"
+spring:
+  application:
+    name: microservice-consumer-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#其中，属性abcdef.ribbon.list-of-Servers 用于为名为abcdef的ribbon客户端设置请求地址列表
+abcdef:
+  ribbon:
+    list-of-Servers: localhost:8000,localhost:8001

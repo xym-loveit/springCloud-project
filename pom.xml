@@ -46,6 +46,10 @@
         <module>microservice-discovery-eureka-authenticating</module>
         <module>microservice-provider-user-my-metadata</module>
         <module>microservice-consumer-movie-understanding-metadata</module>
+        <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-consumer-movie-ribbon-customizing</module>
+        <module>microservice-consumer-movie-ribbon-customizing-properties</module>
+        <module>microservice-consumer-movie-without-eureka</module>
     </modules>
 
     <!--系统公共的属性-->
