@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+---
+#指定当profile=peer1时，主机名是peer1
+#指定profile为peer1
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/
+---
+spring:
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/

@@ -1,0 +1,16 @@
+server:
+  port: 8761
+eureka:
+  client:
+    fetch-registry: false #是否从Eureka Server获取注册信息
+    register-with-eureka: false #是否将自己注册到Eureka Server
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址
+
+#忽略指定名称的网卡注册
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*

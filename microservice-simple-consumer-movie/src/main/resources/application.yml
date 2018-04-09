@@ -1,0 +1,9 @@
+server:
+  port: 8010
+info:
+  app:
+    name: '@project.artifactId@'
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      source: "@maven.compiler.source@"
+      target: "@maven.compiler.target@"
