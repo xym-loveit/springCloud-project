@@ -1,0 +1,17 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+# 1、自定义微服务访问路径 配置 zuul.roues.指定微服务的serviceId=指定路径 即可,microservice-provider-user微服务就会被映射到/user/**路径
+# 2、让zuul忽略microservice-consumer-movie微服务，只代理其他微服务，多个使用逗号分隔
+# 3、使用*忽略所有微服务，只路由指定微服务,#  ignored-services: microservice-consumer-movie
+zuul:
+  routes:
+    microservice-provider-user: /uuu/**
+  ignored-services: '*'
+

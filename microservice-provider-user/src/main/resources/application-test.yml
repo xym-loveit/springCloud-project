@@ -1,6 +1,6 @@
 server:
   port: 8001
 #定义一个虚拟主机名
-eureka:
-  instance:
-    virtual-host-name: abcd
+#eureka:
+#  instance:
+#    virtual-host-name: abcd

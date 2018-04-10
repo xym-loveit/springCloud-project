@@ -19,7 +19,7 @@ spring:
         - docker0
         - veth.*
   profiles:
-    active: dev
+    active: test
 logging: #配置日志级别，让hibernate打印执行的sql
   level:
     root: info
@@ -29,7 +29,7 @@ logging: #配置日志级别，让hibernate打印执行的sql
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 ##,http://peer2:8762/eureka/
 #  instance:
 #    prefer-ip-address: true #表示将自己的ip注册到Eureka Server

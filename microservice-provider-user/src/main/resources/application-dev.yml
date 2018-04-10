@@ -1,6 +1,6 @@
 server:
   port: 8002
 #如果有定义虚拟主机名，则使用虚拟主机名作为serviceId
-eureka:
-  instance:
-    virtual-host-name: abcd
+#eureka:
+#  instance:
+#    virtual-host-name: abcd
