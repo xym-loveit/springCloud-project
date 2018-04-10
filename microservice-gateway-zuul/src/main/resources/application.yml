@@ -10,8 +10,30 @@ eureka:
 # 1、自定义微服务访问路径 配置 zuul.roues.指定微服务的serviceId=指定路径 即可,microservice-provider-user微服务就会被映射到/user/**路径
 # 2、让zuul忽略microservice-consumer-movie微服务，只代理其他微服务，多个使用逗号分隔
 # 3、使用*忽略所有微服务，只路由指定微服务,#  ignored-services: microservice-consumer-movie
+# 4、同时指定微服务的serviceId和对应路径
+# 5、同时指定path和url，这样就可以将/bd/**映射到http://www.baidu.com/,需要注意的是，使用这种方式配置的路由不会作为HystrixCommand执行
+#同时也不能使用bibbon来负载均衡多个url
+# 6、同时指定path和url，并且不破坏zuul的hystrix、ribbon特性
+# 7、使用正则表达式指定zuul的路由规则，借助PatternServiceRouteMapper，实现从微服务到映射路由的正则配置
+# 8、路由前缀
 zuul:
-  routes:
-    microservice-provider-user: /uuu/**
+#  routes:
   ignored-services: '*'
-
+  routes:
+#  该配置方式中，user-route只是给路由一个名称，可以任意起名
+    user-route:
+#      service-id: microservice-provider-user
+#      path: /u3/**
+#    microservice-provider-user: /uuu/**
+#      path: /bd/**
+#      url: http://www.baidu.com/
+      path: /user/**
+      service-id: microservice-provider-user
+---
+#为ribbon禁用eureka
+#ribbon:
+#  eureka:
+#    enabled: flase
+#microservice-provider-user:
+#  ribbon:
+#    list-of-servers: localhost:8000,localhost:8001

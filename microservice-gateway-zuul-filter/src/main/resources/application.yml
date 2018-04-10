@@ -1,0 +1,15 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-gateway-zuul-filter
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#通过zuul.<SimpleClassName>.<FilterType>.disable=true语法，即可禁用SimpleClassName所对应的过滤器
+#禁用自定义过滤器
+#zuul:
+#  PreRequestLogFilter:
+#    pre:
+#      disable: true

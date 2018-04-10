@@ -63,6 +63,8 @@
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-hystrix-turbine</module>
         <module>microservice-gateway-zuul</module>
+        <module>microservice-gateway-zuul-filter</module>
+        <module>microservice-gateway-zuul-fallback</module>
     </modules>
 
     <!--系统公共的属性-->
