@@ -1,5 +1,6 @@
 server:
-  port: 8010
+  port: 8020
+#8010
 info:
   app:
     name: '@project.artifactId@'
@@ -9,7 +10,8 @@ info:
       target: "@maven.compiler.target@"
 spring:
   application:
-    name: microservice-consumer-movie
+    name: microservice-consumer-movie-feign-hystrix-fallback-stream
+#microservice-consumer-movie
 eureka:
   client:
     service-url:

@@ -7,9 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * @author xym
@@ -29,16 +28,16 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 10, 10000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10));
-
-        for (int i = 0; i < 20; i++) {
-            threadPoolExecutor.execute(new Runnable() {
-                @Override
-                public void run() {
+//        final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 10, 1000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10));
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 20; i++) {
                     ResponseEntity<String> forEntity = restTemplate().getForEntity("http://xym-pc:8010/user/{1}", String.class, 2);
                     System.out.println(Thread.currentThread().getId() + "--" + forEntity.getBody());
+
                 }
-            });
-        }
+            }
+        }, 1000, 5 * 1000);
     }
 }
