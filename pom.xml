@@ -51,6 +51,9 @@
         <module>microservice-consumer-movie-ribbon-customizing-properties</module>
         <module>microservice-consumer-movie-without-eureka</module>
         <module>microservice-consumer-movie-feign</module>
+        <module>microservice-consumer-movie-feign-customizing</module>
+        <module>microservice-provider-user-with-auth</module>
+        <module>microservice-consumer-movie-feign-manual</module>
     </modules>
 
     <!--系统公共的属性-->
