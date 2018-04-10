@@ -1,0 +1,22 @@
+server:
+  port: 8010
+info:
+  app:
+    name: '@project.artifactId@'
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      source: "@maven.compiler.source@"
+      target: "@maven.compiler.target@"
+spring:
+  application:
+    name: microservice-consumer-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+#将feign接口的日志级别设置为debug，因为feign的logger.level只对debug作出响应
+logging:
+  level:
+    com.xym.springcloud.client.UserFeignClient: debug
