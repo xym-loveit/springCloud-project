@@ -58,6 +58,8 @@
         <module>microservice-consumer-movie-ribbon-hystrix</module>
         <module>mock-more-requestClient</module>
         <module>microservice-consumer-movie-feign-hystrix-fallback</module>
+        <module>microservice-consumer-movie-feign-hystrix-fallback-factory</module>
+        <module>microservice-consumer-movie-feign-hystrix-fallback-stream</module>
     </modules>
 
     <!--系统公共的属性-->
