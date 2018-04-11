@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-config-server</artifactId>
+    <artifactId>microservice-config-server-encryption-rsa</artifactId>
 
-    <name>microservice-config-server</name>
+    <name>microservice-config-server-encryption-rsa</name>
     <url>http://www.example.com</url>
-    <description>分布式集中配置服务config server</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

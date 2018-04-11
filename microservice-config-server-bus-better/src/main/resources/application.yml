@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    username: xym
+    virtual-host: /xym
+    password: 123456
+    host: localhost
+    port: 5672
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          password: 201025xym##$$
+          username: xym_loveit@126.com
+          uri: https://github.com/xym-loveit/springCloud-project.git
+          search-paths: config-repo
+logging:
+  level:
+    org.springframework.cloud: debug
+    org.springframework.boot: debug
+

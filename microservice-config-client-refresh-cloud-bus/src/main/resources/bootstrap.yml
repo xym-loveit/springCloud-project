@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      uri: http://localhost:8080
+      profile: dev
+      label: master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: xym
+    password: 123456
+    virtual-host: /xym

@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-config-server</artifactId>
+    <artifactId>microservice-config-server-bus-better</artifactId>
 
-    <name>microservice-config-server</name>
+    <name>microservice-config-server-bus-better</name>
     <url>http://www.example.com</url>
-    <description>分布式集中配置服务config server</description>
+    <description>消息总线bus改进，将自动刷新引入到server端，其他client端仅负责业务逻辑，职责单一</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +25,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <!--加入消息总线-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
 
