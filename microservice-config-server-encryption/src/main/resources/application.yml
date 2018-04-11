@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          password: 201025xym##$$
+          username: xym_loveit@126.com
+          uri: https://github.com/xym-loveit/springCloud-project.git
+          search-paths: config-repo
+encrypt:
+  key: xym
+#logging:
+#  level:
+#    org.springframework.cloud: debug
+#    org.springframework.boot: debug

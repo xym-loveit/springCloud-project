@@ -65,6 +65,9 @@
         <module>microservice-gateway-zuul</module>
         <module>microservice-gateway-zuul-filter</module>
         <module>microservice-gateway-zuul-fallback</module>
+        <module>microservice-config-server</module>
+        <module>microservice-config-client</module>
+        <module>microservice-config-server-encryption</module>
     </modules>
 
     <!--系统公共的属性-->
