@@ -1,14 +1,8 @@
 server:
   port: 8080
 spring:
-  rabbitmq:
-    username: xym
-    virtual-host: /xym
-    password: 123456
-    host: localhost
-    port: 5672
   application:
-    name: microservice-config-server
+    name: microservice-config-server-eureka
   cloud:
     config:
       server:
@@ -17,11 +11,12 @@ spring:
           username: xym_loveit@126.com
           uri: https://github.com/xym-loveit/springCloud-project.git
           search-paths: config-repo
-    bus:
-      trace:
-        enabled: true #跟踪消息总线事件
 logging:
   level:
     org.springframework.cloud: debug
     org.springframework.boot: debug
-
+#指定eureka注册中心，将config server 服务注册到eureka中，提供给其他config client读取
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

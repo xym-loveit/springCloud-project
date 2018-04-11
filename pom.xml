@@ -72,6 +72,8 @@
         <module>microservice-config-client-refresh</module>
         <module>microservice-config-client-refresh-cloud-bus</module>
         <module>microservice-config-server-bus-better</module>
+        <module>microservice-config-client-eureka</module>
+        <module>microservice-config-server-eureka</module>
     </modules>
 
     <!--系统公共的属性-->
