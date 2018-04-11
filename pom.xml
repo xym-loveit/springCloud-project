@@ -74,6 +74,8 @@
         <module>microservice-config-server-bus-better</module>
         <module>microservice-config-client-eureka</module>
         <module>microservice-config-server-eureka</module>
+        <module>microservice-simple-provider-user-trace</module>
+        <module>microservice-simple-consumer-movie-trace</module>
     </modules>
 
     <!--系统公共的属性-->
